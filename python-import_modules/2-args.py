@@ -8,9 +8,9 @@ if __name__ == "__main__":
     elif numarg == 1:
         print("{} argument:\n{}: {}".format(numarg, numarg, sys.argv[1]))
     elif numarg > 1:
-        print("{} arguments:\n".format(numarg))
-        for i in range(1, numarg):
-            print("{}: {}".format(i, sys.argv[i + 1]))
+        print("{} arguments:".format(numarg))
+        for i in range(1, numarg + 1):
+            print("{}: {}".format(i, sys.argv[i]))
 
 
 
