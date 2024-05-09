@@ -10,7 +10,7 @@ if __name__ == "__main__":
     elif numarg > 1:
         print("{} arguments:\n".format(numarg))
         for i in range(1, numarg):
-            print("{}: {}".format(i, sys.argv[i]))
+            print("{}: {}".format(i, sys.argv[i + 1]))
 
 
 
