@@ -3,5 +3,5 @@
 class Square:
     """This is the definition of the 'Square' class."""
     def __init__(self, size="3"):
-        """Instance of size"""
+        """Instance of Size"""
         self.__size = size
