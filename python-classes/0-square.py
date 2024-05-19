@@ -3,4 +3,4 @@
 
 
 class Square:
-    """This is the definition of the 'Square' class, which is currently empty."""
+    """This is the definition of the 'Square' class."""
