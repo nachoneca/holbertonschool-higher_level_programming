@@ -1,9 +1,17 @@
 #!/usr/bin/python3
 """This module defines an empty class named 'Square'"""
 class Square:
-    """This is the definition of the 'Square' class"""
+    """Represents a square."""
     def __init__(self, size=0):
-        """Instance of Size"""
+        """Initialize a new Square.
+
+        Args:
+            size (int): The size of the square (default is 0).
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
