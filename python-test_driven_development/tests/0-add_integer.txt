@@ -1,1 +1,24 @@
-kjqwefkqwenfkqjwen
+import unittest
+from 0-add_integer import add_integer  # Importamos la función del archivo correspondiente
+
+class TestAddIntegerTypeError(unittest.TestCase):
+    def test_invalid_types(self):
+        with self.assertRaises(TypeError):
+            add_integer("1", 2)
+        with self.assertRaises(TypeError):
+            add_integer(1, "2")
+        with self.assertRaises(TypeError):
+            add_integer([1, 2], 3)
+        with self.assertRaises(TypeError):
+            add_integer(1, None)
+        with self.assertRaises(TypeError):
+            add_integer(None, 1)
+        with self.assertRaises(TypeError):
+            add_integer(1, [2, 3])
+        with self.assertRaises(TypeError):
+            add_integer({1: 'one'}, 2)
+        with self.assertRaises(TypeError):
+            add_integer(1, {2: 'two'})
+
+if __name__ == "__main__":
+    unittest.main()
