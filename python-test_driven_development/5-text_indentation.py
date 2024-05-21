@@ -18,7 +18,7 @@ def text_indentation(text):
                 continue
             new_txt += char
             skip_space = False
-    print(new_txt)
+    print(new_txt.strip())
 
 
 
