@@ -1,33 +1,46 @@
-Esta función suma dos números.
->>> add integer = import_('0-add_integer").add_integer
->>> add_integer(3, 5)
-8
->>> add_integer(-2, 2)
-0
->>> add integer (10.5, 3)
-13
->>> add_integer(0, 0)
-0
->>> add_ integer(0.092478059832475284375023498572349805733333333333, 2)
-2
->>> add_integer (29834e578320)
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(4.5, 2.3)
+6
+>>> add_integer("a", 1)
 Traceback (most recent call last):
-...
-OverFlowError: cannot convert float infinity to integer
->>> add integer (float('nan' *S)
+    ...
+TypeError: a must be an integer
+>>> add_integer(1, "b")
 Traceback (most recent call last):
-...
-valueError: cannot convert float NaN to integer
->>> add integer('a',10)
-Traceback (most recent call last):
-...
-Typerror: a must be an integer
->>> add_integer (10, 'a')
-Traceback (most recent call last):
+    ...
 TypeError: b must be an integer
->>> add_integer (10)
-108
->>> add_integer ()
+>>> add_integer(1.9)
+99
+>>> add_integer((1,2), 3)
 Traceback (most recent call last):
 ...
-TypeErrors add_integer () missing 1 required positional arguments: 'a'
+TypeError: a must be an integer
+>>> add_integer(2, (3, 4))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(float('inf'), 3)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(3, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('nan'), 3)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(3, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
