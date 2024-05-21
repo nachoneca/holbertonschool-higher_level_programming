@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" """
+"""take max integer"""
 
 
 def max_integer(list=[]):
+    """Compares list and returns max integer"""
     if not list:
         return None
     result = list[0]
