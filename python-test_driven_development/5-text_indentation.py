@@ -8,6 +8,8 @@ def text_indentation(text):
     flag = False
     if type(text) is not str:
         raise TypeError("text must be a string")
+    if text == "":
+        raise TypeError("text must be a string")
     new_text = text.replace(". ", ".")
     new_text = new_text.replace(": ", ":")
     new_text = new_text.replace("? ", "?")
