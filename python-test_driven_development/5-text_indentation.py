@@ -4,21 +4,22 @@
 
 def text_indentation(text):
     """If found any specified chars, add 2 New Line"""
-    if not isinstance(text, str):
+    new_text = ""
+    flag = False
+    if type(text) is not str:
         raise TypeError("text must be a string")
-    jumpers = [".", "?", ":"]
-    new_txt = ""
-    no_space = False
-    for char in text:
-        if char in jumpers:
-            new_txt += char + "\n\n"
-            no_space = True
+    new_text = text.replace(". ", ".")
+    new_text = new_text.replace(": ", ":")
+    new_text = new_text.replace("? ", "?")
+    for char in new_text:
+        if char in [".", "?", ":"]:
+            print(char)
+            print()
+            flag = True
         else:
-            if no_space and char == " ":
-                continue
-            new_txt += char
-            skip_space = False
-    print(new_txt.strip())
-
-
-
+            if flag is False:
+                print(char, end="")
+            else:
+                if char != " ":
+                    print(char, end="")
+                    flag = False
