@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""  """
+"""Text indetation if any of ".", "?", ":", prints a New Line"""
 
 
 def text_indentation(text):
+    """If found any specified chars, add 2 New Line"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     jumpers = [".", "?", ":"]
