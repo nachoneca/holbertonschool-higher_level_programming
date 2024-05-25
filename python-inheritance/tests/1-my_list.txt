@@ -25,3 +25,10 @@
 >>> Neka = MyList([1, 2, 3, 4])
 >>> print(str(Neka))
 [1, 2, 3, 4]
+
+>>> Neka = MyList([4, 3, 2, 1])
+>>> Neka.print_sorted()
+[1, 2, 3, 4]
+>>> sorted_list = sorted(Neka)
+>>> sorted_list is Neka
+False
