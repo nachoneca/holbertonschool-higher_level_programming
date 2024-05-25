@@ -21,3 +21,7 @@
 	>>> my_list.append(2)
 	>>> my_list.print_sorted()
 	[1, 2]
+	
+	>>> Neka = MyList([1, 2, 3, 4])
+	>>> print(str(Neka))
+	[1, 2, 3, 4]
