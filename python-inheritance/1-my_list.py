@@ -1,21 +1,11 @@
 #!/usr/bin/python3
-"""
-Subclass of a list
-"""
-
+"""MyList"""
 
 
 class MyList(list):
-    """Subclass of list with a method to print its elements sorted.
-
-    Args:
-        list: Base class providing a mutable list of objects.
-
-    Methods:
-        print_sorted(): Prints the elements of the list in ascending order.
-    """
+    """My list """
 
     def print_sorted(self):
-        """Prints the elements of the list in ascending order."""
-        print(sorted(self))
+        """return is list """
 
+        print(sorted(self))
