@@ -1,34 +1,13 @@
->>> MyList = __import__('1-my_list').MyList
+>>> MyList = __import__("1-my_list").MyList
+    >>> list = MyList()
+    >>> list.append(0)
+    >>> list.append(1)
+    >>> list.print_sorted()
+    [0, 1]
 
->>> my_list = MyList([])
->>> my_list.print_sorted()
-[]
+    >>> MyList.print_sorted([5, -5, 0])
+    [-5, 0, 5]
 
->>> my_list = MyList([1, 2])
->>> my_list.print_sorted()
-[1, 2]
-
->>> my_list = MyList([2, 1])
->>> my_list.print_sorted()
-[1, 2]
-
->>> my_list = MyList([-2, -1])
->>> my_list.print_sorted()
-[-2, -1]
-
->>> my_list = MyList([])
->>> my_list.append(1)
->>> my_list.append(2)
->>> my_list.print_sorted()
-[1, 2]
-
->>> Neka = MyList([1, 2, 3, 4])
->>> print(str(Neka))
-[1, 2, 3, 4]
-
->>> Neka = MyList([4, 3, 2, 1])
->>> Neka.print_sorted()
-[1, 2, 3, 4]
->>> sorted_list = sorted(Neka)
->>> sorted_list is Neka
-False
+    >>> MyList.print_sorted(["x", 1])
+    Traceback (most recent call last):
+    TypeError: all the values of the list must be integers
