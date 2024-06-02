@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Made by Jorge Beritan
-"""
+"""fetch_and_print_posts and fetch_and_save_posts"""
 
 
 import requests
