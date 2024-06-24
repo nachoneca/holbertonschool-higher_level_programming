@@ -1,4 +1,4 @@
--- Show for each show all the generes that have by inner joining twice
+-- Shows for each show all the generes that have by inner joining twice
 
 SELECT tv_genres.name
 FROM tv_genres
