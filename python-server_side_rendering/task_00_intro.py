@@ -3,28 +3,28 @@ from string import Template
 import string
 
 def generate_invitations(template_content, attendees):
-# Read the template from a file
-    template = string.Template(template_content)
+    
     if not template_content.strip():
-        print("Error: Template is empty, no output files generated.")
+        print("Error: La plantilla está vacía, no se generaron archivos de salida.")
         return
     
-    # Verificar si la lista de asistentes está vacía
     if not attendees:
-        print("Error: No data provided, no output files generated.")
+        print("Error: No se proporcionaron datos, no se generaron archivos de salida.")
         return
+    
     for index, attendee in enumerate(attendees, start=1):
         try:
-            output_content = template.safe_substitute(
-                name=attendee.get("name", "N/A"),
-                event_title=attendee.get("event_title", "N/A"),
-                event_date=attendee.get("event_date", "N/A") if attendee.get("event_date") else "N/A",
-                event_location=attendee.get("event_location", "N/A")
-            )
+            name = attendee.get("name") if attendee.get("name") else "N/A"
+            output_content = template_content.replace('{name}', attendee.get("name", "N/A")) 
+            event_title = attendee.get("event_title") if attendee.get("event_title") else "N/A"
+            output_content = output_content.replace('{event_title}', attendee.get("event_title", "N/A"))
+            event_location = attendee.get("event_location") if attendee.get("event_location") else "N/A"
+            output_content = output_content.replace('{event_location}', attendee.get("event_location", "N/A"))
+            event_date = attendee.get("event_date") if attendee.get("event_date") else "N/A"
+            output_content = output_content.replace('{event_date}', event_date)
         except KeyError as e:
-            print(f"Error: Missing key {e} in attendee data.")
+            print(f"Error: Clave faltante {e} en los datos del asistente.")
             continue
-
         output_filename = f"output_{index}.txt"
         with open(output_filename, 'w') as output_file:
             output_file.write(output_content)
