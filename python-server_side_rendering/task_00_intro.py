@@ -3,7 +3,13 @@ from string import Template
 import string
 
 def generate_invitations(template_content, attendees):
-    
+    if not isinstance(template_content, str):
+        print("Error: Template is not str")
+        return
+    if not isinstance(attendees, list):
+        print("Error: attendees is not a list")
+        return
+
     if not template_content.strip():
         print("Error: Template is empty")
         return
