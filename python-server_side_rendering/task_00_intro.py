@@ -5,11 +5,11 @@ import string
 def generate_invitations(template_content, attendees):
     
     if not template_content.strip():
-        print("Error: La plantilla está vacía, no se generaron archivos de salida.")
+        print("Error: Template is empty")
         return
     
     if not attendees:
-        print("Error: No se proporcionaron datos, no se generaron archivos de salida.")
+        print("Error: attendees is empty.")
         return
     
     for index, attendee in enumerate(attendees, start=1):
