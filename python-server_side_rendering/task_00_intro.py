@@ -5,6 +5,14 @@ import string
 def generate_invitations(template_content, attendees):
 # Read the template from a file
     template = string.Template(template_content)
+    if not template_content.strip():
+        print("Error: Template is empty, no output files generated.")
+        return
+    
+    # Verificar si la lista de asistentes está vacía
+    if not attendees:
+        print("Error: No data provided, no output files generated.")
+        return
     for index, attendee in enumerate(attendees, start=1):
         try:
             output_content = template.safe_substitute(
