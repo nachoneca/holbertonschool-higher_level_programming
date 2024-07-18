@@ -1,3 +1,4 @@
 main.py
 template.txt
 *.pyc
+__pycache__
