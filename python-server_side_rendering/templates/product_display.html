@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product dispaly</title>
+  </head>
+  <body>
+    <header>{% include "header.html" %}</header>
+    <h1>Product Display</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if products == 1 %}
+        <p>Product not found</p>
+        {% else %}
+          {% if not products %}
+          <p>Wrong source</p>
+          {% else %} 
+          {% for product in products %}
+          <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price}}</td>
+          </tr>
+          {% endfor %} {% endif %} 
+          {% endif %}
+      </tbody>
+    </table>
+    <footer>{% include "footer.html" %}</footer>
+  </body>
+</html>
