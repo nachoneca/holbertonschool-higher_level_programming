@@ -2,3 +2,4 @@ main.py
 template.txt
 *.pyc
 __pycache__
+.gitignore
